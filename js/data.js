@@ -1,0 +1,50 @@
+export const postsArray = [
+    {
+        name: "Blog One",
+        date:"July 23, 2022",
+        excerpt:"I'm excited to start a new learning journey as a Scrimba Bootcamp student!After several months of learning in the Fontend Developer Career Path...",
+        blogContent:"",
+        imageUrl:"images/Blog-img-1.png",
+        alt:"Laptop on a desktop",
+    },
+    {
+        name: "Blog Two",
+        date:"July 23, 2022",
+        excerpt:"I'm excited to start a new learning journey as a Scrimba Bootcamp student!After several months of learning in the Fontend Developer Career Path...",
+        blogContent:"",
+        imageUrl:"images/Blog-img-2.png",
+        alt:"Bulb held by a hand",
+    },
+    {
+        name: "Blog Three",
+        date:"July 23, 2022",
+        excerpt:"I'm excited to start a new learning journey as a Scrimba Bootcamp student!After several months of learning in the Fontend Developer Career Path...",
+        blogContent:"",
+        imageUrl:"images/Blog-img-3.png",
+        alt:"Reflection from a building mirror",
+    },
+    {
+        name: "Blog Four",
+        date:"July 23, 2022",
+        excerpt:"I'm excited to start a new learning journey as a Scrimba Bootcamp student!After several months of learning in the Fontend Developer Career Path...",
+        blogContent:"",
+        imageUrl:"images/Blog-img-4.png",
+        alt:"Woman on a beach",
+    },
+        {
+        name: "Blog Five",
+        date:"July 23, 2022",
+        excerpt:"I'm excited to start a new learning journey as a Scrimba Bootcamp student!After several months of learning in the Fontend Developer Career Path...",
+        blogContent:"",
+        imageUrl:"images/Blog-img-5.png",
+        alt:"An IDE with an open project",
+    },
+    {
+        name: "Blog Six",
+        date:"July 23, 2022",
+        excerpt:"I'm excited to start a new learning journey as a Scrimba Bootcamp student!After several months of learning in the Fontend Developer Career Path...",
+        blogContent:"",
+        imageUrl:"images/Blog-img-6.png",
+        alt:"An open laptop placed on a table",
+    }
+]

@@ -1,0 +1,133 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap');
+
+*, *::before, *::after {
+    box-sizing: border-box;    
+}
+
+html, 
+body,button {
+    font-family: "Source Sans 3", sans-serif;
+    display:grid;
+    grid-template-columns:1fr;
+    grid-template-areas: 
+        "head"
+        "hero"
+        "feed"
+        "foot";
+    margin:0; /* removes the edges around the browser and the colum */
+    padding: 0;/* removes the edges around the browser and the colum */
+}
+
+/* HEADER SECTION STYLING */
+#header_section{
+    display: flex;
+    justify-content: space-between;
+    padding: .5em 1em .5em 1em;
+    align-items: center;
+    background-color: white;
+    grid-area:head;
+}
+
+#logo{
+    width: 40%;
+    height: 45%;
+}
+
+#nav_list li{
+    display: inline;
+    font-weight: bold;
+    margin-right: 1em;
+    font-size: 0.8rem;
+}
+
+/* HERO SECTION */
+#hero{
+    padding: 4em 1em 1em 0.5em;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url(/images/Hero-img.png);
+    background-size: cover;
+    background-position: bottom; 
+    background-repeat: no-repeat;  
+    width:100%;
+    grid-area:hero;
+}
+
+#date{
+    color: grey;
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 0em;
+}
+
+#hero_big_txt{
+    color: white;
+    font-weight: bold;
+    font-size: 2.1rem;
+    line-height: 1.1em;
+}
+
+#hero_sml_txt{
+    color: white;
+    font-weight: normal;
+    font-size: 0.95rem;
+    line-height: 1.4em;
+}
+
+/*BLOG FEED SECTION*/
+#blog_feed{
+    grid-area: feed;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    padding: 1em;
+    margin: 0 auto;
+}
+
+.post_thumbnail{
+    margin-bottom: 1.3em;
+}
+.post_content{
+    line-height: 0.8em;
+}
+
+.post_content p{
+    line-height: 1.2em;
+}
+
+.post_thumbnail img{
+    width: 100%;
+    max-width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 0.5em;
+}
+
+#view-more-btn{
+    width: 100%;
+    font-size: 1.2em;
+    background-color: transparent;
+    border: transparent;
+    font-weight: bold;
+    text-align: center;
+    
+}
+/* FOOTER SECTION */
+
+footer{
+    grid-area: foot;
+    background-color: #030C11;
+    color: white;
+    align-items: center;
+    text-align: center;
+    line-height: 0.4em;
+    padding: 1.5em;
+}
+
+/*UTILTIES*/
+.hidden{
+  display: none;
+}
+
+.flex{
+  display: flex;
+}
