@@ -5,6 +5,7 @@
     box-sizing: border-box;    
 }
 
+
 html, 
 body,button {
     font-family: "Source Sans 3", sans-serif;
@@ -12,13 +13,17 @@ body,button {
     grid-template-columns:1fr;
     grid-template-areas: 
         "head"
-        "hero"
-        "feed"
+        "content"
         "foot";
     margin:0; /* removes the edges around the browser and the colum */
     padding: 0;/* removes the edges around the browser and the colum */
 }
 
+/*for other pages*/
+#content{
+    grid-area:content;
+    padding: 1em;
+}
 /* HEADER SECTION STYLING */
 #header_section{
     display: flex;
@@ -34,11 +39,41 @@ body,button {
     height: 45%;
 }
 
+#avatar{
+    width: 50%;
+    height: 50%;
+}
+
 #nav_list li{
     display: inline;
     font-weight: bold;
     margin-right: 1em;
     font-size: 0.8rem;
+}
+
+#nav_list li.active a {
+    color: green; /* Adjust this to matches your layout's theme color */
+    border-bottom: 2px solid green;
+    padding-bottom: 2px;
+}
+
+#nav_list a:link{
+    display: inline;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.8rem;
+    color: #030C11;
+}
+
+
+/* 2. Visited link */
+#nav_list a:visited {
+  color: #030C11;
+}
+
+/* 3. Mouse-over link */
+#nav_list a:hover {
+  color: green;
 }
 
 /* HERO SECTION */

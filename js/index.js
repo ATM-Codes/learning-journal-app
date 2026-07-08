@@ -1,19 +1,17 @@
 import {postsArray} from './data.js'
 
 const postFeedEl = document.getElementById("blog_feed")
+const recentPostFeedEl = document.getElementById("recent_posts")
 
 let visibleCount=3
+let recentCount=3
 
-
-function getPostFeedHTML(){
+function getPostFeedHTML(count, showButton){
     
     let feedHTML=''
-
-    let postsToRender = postsArray.slice(0,visibleCount)
+    let postsToRender = postsArray.slice(0,count)
     
-    // console.log(postsToRender)
-    
-    postsToRender.forEach(function(blog){
+     postsToRender.forEach(function(blog){
         feedHTML+=`
         <div class="post_thumbnail">
             <img src="${blog.imageUrl}" alt="${blog.alt}">
@@ -25,23 +23,33 @@ function getPostFeedHTML(){
         </div>`
     }
     )
-    if (visibleCount < postsArray.length) {
-    feedHTML += `<button id="view-more-btn">View More</button>`;
-    }
-    
-    // console.log(feedHTML)
+        if (showButton && count < postsArray.length) {
+        feedHTML += `<button id="view-more-btn">View More</button>`;
+        }
     return feedHTML
 }
 
-postFeedEl.addEventListener('click',function(event){
+
+//View more button functionality 
+if(postFeedEl){
+    postFeedEl.addEventListener('click',function(event){
     if(event.target.id=="view-more-btn"){
-        visibleCount=visibleCount+3
+        visibleCount+=3
         render()
+        }
+    }
+    )
 }
-})
 
 function render(){
-    postFeedEl.innerHTML=getPostFeedHTML()
+    if(postFeedEl){
+        console.log("Index test")
+        postFeedEl.innerHTML=getPostFeedHTML(visibleCount,true)
+    }
+    if(recentPostFeedEl){
+        console.log("About me test")
+        recentPostFeedEl.innerHTML=getPostFeedHTML(recentCount,false)
+    }
 }
 
 render()
