@@ -11,7 +11,11 @@ function getPostFeedHTML(count, showButton){
     let feedHTML=''
     let postsToRender = postsArray.slice(0,count)
     
+    if(!showButton){
+            feedHTML+='<h3 id="recent_post_heading">Recent Posts</h3>'
+     }
      postsToRender.forEach(function(blog){
+
         feedHTML+=`
         <div class="post_thumbnail">
             <img src="${blog.imageUrl}" alt="${blog.alt}">
