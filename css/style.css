@@ -47,7 +47,7 @@ body,button {
 
 #avatar{
     width: 50%;
-    height: 50%;
+    height: auto;
 }
 
 #nav_list li{
@@ -123,8 +123,9 @@ body,button {
     margin: 0 auto;
     gap:1em;
     align-items: center;
-
 }
+
+
     #recent_post_heading{
        grid-column: 1 / -1;
        text-align: center;
@@ -195,7 +196,7 @@ footer{
     #hero{
         padding: 13em 1em 1em 1em;
         background-size: cover;
-        background-position: center bottom; 
+        background-position: center center; 
     }
     
     #hero_sml_txt{
@@ -216,7 +217,7 @@ footer{
     
     /* ABOUT ME SECTION */
     #avatar{
-    width: 40%;
+    max-width: 220px;
     height: auto;
     }
     
@@ -243,6 +244,7 @@ footer{
     
     #recent_posts{
         padding: 2em;
+        grid-template-columns:repeat(3,minmax(100px,1fr));
     }
     
 }
